@@ -1,20 +1,23 @@
-<div id="freewall">
-  <%= render partial: 'home/generic_image', collection: @images %>
+<!-- <div id="freewall"> -->
+<div class="col-md-12">
+  <div class="row">
+    <%= render partial: 'home/generic_image', collection: @images %>
+  </div>
 </div>
 
 <script>
-    var wall = new Freewall("#freewall");
-    wall.reset({
-      selector: '.brick',
-      animate: true,
-      cellW: 200,
-      cellH: 'auto',
-      onResize: function() {
-        wall.fitWidth();
-      }
-    });
-
-    wall.container.find('.brick img').load(function() {
-      wall.fitWidth();
-    });
+    // var wall = new Freewall("#freewall");
+    // wall.reset({
+    //   selector: '.brick',
+    //   animate: true,
+    //   cellW: 200,
+    //   cellH: 'auto',
+    //   onResize: function() {
+    //     wall.fitWidth();
+    //   }
+    // });
+    //
+    // wall.container.find('.brick img').load(function() {
+    //   wall.fitWidth();
+    // });
 </script>
