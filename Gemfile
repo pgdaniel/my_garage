@@ -44,7 +44,6 @@ gem 'erubis'
 gem 'rails_admin', '~> 1.1.1'
 gem 'mini_magick'
 gem 'jquery-rails'
-gem 'pinterest-api'
 gem 'geocoder'
 
 group :development, :test do
@@ -53,6 +52,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :development do

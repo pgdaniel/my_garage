@@ -16,4 +16,5 @@
 //= require jquery
 //= require turbolinks
 //= require freewall
+//= require bootstrap
 //= require_tree .

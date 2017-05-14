@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyGarage</title>
+    <title>Jeep Garage</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +10,7 @@
 
   <body>
     <div class="container">
+    <%= render 'layouts/nav' %>
     <%= yield %>
   </div>
   </body>
