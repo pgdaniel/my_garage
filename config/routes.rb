@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'hello_world', to: 'hello_world#index'
 
+  namespace :api do
+    namespace :v1 do
+      resources :favorite_photos
+    end
+  end
+
   resource :home, controller: 'home'
   resources :users
   root to: 'home#show'

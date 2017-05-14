@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+class UsersController < Devise::UsersController
+
   def index
     @users = UserDecorator.wrap(User.all)
   end
