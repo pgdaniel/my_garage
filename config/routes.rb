@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/index'
+
   get 'users/index'
 
   devise_for :users
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   resource :home, controller: 'home'
-  resources :users
+  resources :favorites
+  
   root to: 'home#show'
 end
