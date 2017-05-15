@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'favorites/index'
-
-  get 'users/index'
-
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -17,6 +13,6 @@ Rails.application.routes.draw do
 
   resource :home, controller: 'home'
   resources :favorites
-  
+
   root to: 'home#show'
 end

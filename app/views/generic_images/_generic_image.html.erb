@@ -1,0 +1,15 @@
+<div class="brick">
+  <div class="col-md-4">
+    <div class="thumbnail" id=image-<%= generic_image.id %>>
+      <%= image_tag generic_image.image.medium %>
+      <div class="caption">
+        <% if favorited? generic_image %>
+          <span class="heart glyphicon glyphicon-heart" aria-hidden="true"></span>
+        <% else %>
+          <span class="heart-empty glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+        <% end %>
+        <span><i>Likes:</span> <span class="likes"><%= number_of_likes generic_image %></span>
+      </div>
+    </div>
+  </div>
+</div>

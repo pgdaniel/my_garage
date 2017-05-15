@@ -22,3 +22,18 @@
 // 	padding: 0px;
 // 	display: block;
 // }
+
+.heart {
+  color: red;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.heart-empty {
+  color: black;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
