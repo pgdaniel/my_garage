@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :favorite_photos
+      resources :users
+      resources :generic_images
     end
   end
 

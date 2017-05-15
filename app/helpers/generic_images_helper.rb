@@ -1,0 +1,2 @@
+module GenericImagesHelper
+end
