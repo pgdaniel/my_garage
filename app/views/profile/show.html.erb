@@ -1,0 +1,8 @@
+<h1>Profile</h1>
+<%= link_to 'Edit profile', edit_profile_path %>
+
+<h3>Garages</h3>
+<%= link_to 'New garage', new_garage_path %>
+<% current_user.garages.each do |garage| %>
+  <p><%= garage.name %></p>
+<% end %>

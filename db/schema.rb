@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514072200) do
+ActiveRecord::Schema.define(version: 20170515063523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,23 @@ ActiveRecord::Schema.define(version: 20170514072200) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "garage_items", force: :cascade do |t|
+    t.bigint "garage_id"
+    t.bigint "generic_image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["garage_id"], name: "index_garage_items_on_garage_id"
+    t.index ["generic_image_id"], name: "index_garage_items_on_generic_image_id"
+  end
+
+  create_table "garages", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_garages_on_user_id"
   end
 
   create_table "generic_images", force: :cascade do |t|
@@ -70,6 +87,9 @@ ActiveRecord::Schema.define(version: 20170514072200) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "garage_items", "garages"
+  add_foreign_key "garage_items", "generic_images"
+  add_foreign_key "garages", "users"
   add_foreign_key "user_favorites", "generic_images"
   add_foreign_key "user_favorites", "users"
 end

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   resource :home, controller: 'home'
   resources :favorites
+  resources :garages do
+    resource :add_to_garage
+  end
+  resource :profile, controller: 'profile'
 
   root to: 'home#show'
 end

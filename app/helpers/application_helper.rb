@@ -1,5 +1,6 @@
 module ApplicationHelper
   def favorited?(generic_image)
+    return unless current_user
     current_user.user_favorites.map(&:generic_image).include?(generic_image)
   end
 

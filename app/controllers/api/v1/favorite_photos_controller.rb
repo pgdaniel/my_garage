@@ -1,6 +1,8 @@
 module Api
   module V1
     class FavoritePhotosController < ApplicationController
+      before_action :authenticate_user!
+
       def index
         render json: { status: 200 }
       end

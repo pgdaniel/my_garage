@@ -21,11 +21,11 @@ $(function() {
       $target.removeClass('heart');
       $likes.text(parseInt($likes.text()) - 1);
     })
-    .fail(function() {
-      console.log( "error" );
+    .fail(function(jqXHR, textStatus) {
+      console.log("error", jqXHR.status);
     })
     .always(function() {
-      console.log( "complete" );
+      console.log("complete");
     });
   });
 
@@ -51,8 +51,10 @@ $(function() {
       $target.addClass('heart');
       $likes.text(parseInt($likes.text()) + 1);
     })
-    .fail(function() {
-      console.log( "error" );
+    .fail(function(jqXHR, textStatus) {
+      if(jqXHR.status == 401) {
+        alert("Log in to favorite items...");
+      }
     })
     .always(function() {
       console.log( "complete" );
