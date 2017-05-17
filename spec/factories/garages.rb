@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :garage do
-    name "MyString"
+    name 'MyString'
     user nil
   end
 end

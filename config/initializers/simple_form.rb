@@ -1,7 +1,5 @@
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  # Components used by the form builder to generate a complete input. You can remove
-  # any of them, change the order, or even add your own components to the stack.
   # config.components = [ :placeholder, :label_input, :hint, :error ]
 
   # Default tag used on hints.
@@ -37,10 +35,8 @@ SimpleForm.setup do |config|
   # CSS class to add to the wrapper if the field has errors.
   # config.wrapper_error_class = :field_with_errors
 
-  # You can wrap a collection of radio/check boxes in a pre-defined tag, defaulting to none.
   # config.collection_wrapper_tag = nil
 
-  # You can wrap each item in a collection of radio/check boxes with a tag, defaulting to span.
   # config.item_wrapper_tag = :span
 
   # Series of attempts to detect a default label method for collection.

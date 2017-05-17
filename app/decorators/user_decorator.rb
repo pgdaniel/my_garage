@@ -6,7 +6,7 @@ class UserDecorator < SimpleDelegator
   end
 
   def full_name
-    first_name + " " + last_name
+    first_name + ' ' + last_name
   end
 
   def age
@@ -22,5 +22,4 @@ class UserDecorator < SimpleDelegator
   def todays_year
     @todays_year ||= Date.today.year
   end
-
 end

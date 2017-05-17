@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum gender: [ :male, :female ]
+  enum gender: [:male, :female]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

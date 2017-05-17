@@ -16,7 +16,9 @@ module Api
       end
 
       def destroy
-        found_generic_image = current_user.user_favorites.find_by(generic_image: generic_image)
+        found_generic_image = current_user.user_favorites.find_by(
+          generic_image: generic_image
+        )
         if found_generic_image.destroy
           render json: { status: 200 }
         else
