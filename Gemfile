@@ -41,6 +41,7 @@ group :development do
   gem 'letter_opener'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rails_best_practices'
 end
 
 gem 'mini_racer', platforms: :ruby
