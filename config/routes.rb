@@ -7,7 +7,7 @@
   namespace :api do
     namespace :v1 do
       resources :favorite_photos, only: [:update, :destroy, :index]
-      resources :users, :only: :index
+      resources :users, only: :index
       resources :generic_images, only: :index
     end
   end

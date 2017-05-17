@@ -44,4 +44,8 @@ group :development do
   gem 'rails_best_practices'
 end
 
+group :test do
+  gem 'rspec_api_documentation'
+end
+
 gem 'mini_racer', platforms: :ruby
