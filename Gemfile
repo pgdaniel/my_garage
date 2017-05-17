@@ -10,7 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-# gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'bootstrap-sass'
 gem 'carrierwave'
@@ -28,10 +28,10 @@ gem 'simple_form'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'pry-rails'
-  gem 'rspec-rails'
 end
 
 group :development do

@@ -1,6 +1,6 @@
 module Api
   module V1
-    class GenericImagesController < ActionController::API
+    class GenericImagesController < BaseApiController
       def index
         render json: GenericImage.all
       end
