@@ -8,10 +8,12 @@ module Api
       end
 
       def update
-        if current_user.user_favorites.create!(generic_image: generic_image)
-          render json: { status: 200 }
+        if !already_favorited? && current_user.user_favorites.create(
+          generic_image: generic_image
+        )
+          render json: nil, status: :created
         else
-          render json: { status: 403 }
+          render json: nil, status: :unprocessable_entity
         end
       end
 
@@ -21,13 +23,19 @@ module Api
         )
 
         if found_generic_image.destroy
-          render json: { status: 200 }
+          render json: nil, status: :accepted
         else
-          render json: { status: 403 }
+          render json: nil, status: :unprocessable_entity
         end
       end
 
       private
+
+      def already_favorited?
+        current_user.user_favorites.map(&:generic_image_id).include?(
+          generic_image.id
+        )
+      end
 
       def generic_image
         @generic_image = GenericImage.find(params[:id])

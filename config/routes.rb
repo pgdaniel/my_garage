@@ -1,3 +1,4 @@
+Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -14,9 +15,7 @@
 
   resource :home, controller: 'home'
   resources :favorites, only: :index
-  resources :garages, only: [:new, :create] do
-  end
-
+  resources :garages, only: [:new, :create]
   resource :profile, controller: 'profile', only: [:show, :edit]
 
   root to: 'home#show'
